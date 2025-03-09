@@ -1,0 +1,25 @@
+html {
+    color: #DCDCDC;
+}
+
+body {
+    margin: 0px;
+    background-color: #000;
+}
+
+.transmission {
+    position: absolute;
+    font-family: sans-serif;
+    color: #e5d5ff;
+    font-weight: normal;
+    font-size: 24px;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.details {
+    color: #70717F;
+    font-size: 20px;
+}
