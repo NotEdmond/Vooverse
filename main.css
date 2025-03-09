@@ -9,9 +9,9 @@ body {
 
 .transmission {
     position: absolute;
-    font-family: "Courier New";
     color: #e5d5ff;
     font-size: 24px;
+    font-weight: 300;
     text-align: center;
     top: 50%;
     left: 50%;
@@ -21,4 +21,5 @@ body {
 .details {
     color: #70717F;
     font-size: 20px;
+    font-family: ui-monospace;
 }
