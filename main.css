@@ -8,18 +8,18 @@ body {
 }
 
 .transmission {
-    position: absolute;
     color: #e5d5ff;
-    font-size: 25px;
-    font-family: ui-sans-serif;
+    font-size: 2em;
+    font-family: sans-serif;
     text-align: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%)
+    position: absolute;
 }
 
-.protip {
+.hint {
     color: #737482;
-    font-size: 19px;
-    font-family: ui-monospace;
+    font-size: 1em;
+    font-family: monospace;
 }
