@@ -10,7 +10,7 @@ body {
 .transmission {
     color: #e5d5ff;
     font-size: 2em;
-    font-family: sans-serif;
+    font-family: Consolas;
     text-align: center;
     top: 50%;
     left: 50%;
@@ -21,5 +21,4 @@ body {
 .hint {
     color: #737482;
     font-size: 1em;
-    font-family: monospace;
 }
