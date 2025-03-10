@@ -10,8 +10,7 @@ body {
 .transmission {
     position: absolute;
     color: #e5d5ff;
-    font-size: 24px;
-    font-weight: 300;
+    font-size: 25px;
     font-family: ui-sans-serif;
     text-align: center;
     top: 50%;
@@ -21,6 +20,6 @@ body {
 
 .details {
     color: #737482;
-    font-size: 20px;
+    font-size: 19px;
     font-family: ui-monospace;
 }
