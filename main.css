@@ -1,23 +1,23 @@
 html {
-    color: #DCDCDC;
+    color: #DCDCDC
 }
 
 body {
     margin: 0px;
-    background-color: #000;
+    background-color: #000
 }
 
 .transmission {
     color: #B2E9F2;
-    font-size: 1em;
+    font-size: 1rem;
     font-family: Monaco, monospace;
     text-align: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    position: absolute;
+    position: absolute
 }
 
 .hint {
-    color: #737482;
+    color: #737482
 }
