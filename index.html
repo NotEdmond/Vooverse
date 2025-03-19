@@ -1,127 +1,163 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Vooverse</title>
-        <link href="favicon.ico" rel="icon" type="image/x-icon">
-        <meta name="description" content="Prepare for the platform of a lifetime.">
-        <style>
-            html {
-                color: #DCDCDC;
-                font-family: Monaco, monospace
-            }
+<head>
+    <title>Vooverse</title>
+    <link href="favicon.ico" rel="icon" type="image/x-icon">
+    <link href="https://rsms.me/inter/inter.css" rel="stylesheet">
+    <meta name="description" content="Prepare for the platform of a lifetime.">
+    <style>
+        html {
+            color: rgba(255, 255, 255, 0.64);
+            font-family: Inter;
+        }
 
-            body {
-                margin: 0px;
-                background-color: rgb(29, 30, 32)
-            }
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: #121218;
+            overflow: hidden;
+        }
 
-            * {
-                box-sizing: border-box
-            }
+        .transmission {
+            max-width: 37.5rem;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            padding: 1rem 0;
+        }
 
-            .faq {
-                max-width: 37.50rem;
-                margin: 0 auto;
-            }
+        .title {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            font-size: 1.1rem;
+            color: rgb(143, 143, 255);
+            text-align: center;
+        }
 
-            .title {
-                padding: 1rem 0rem 1rem;
-                font-size: 1rem;
-                color: #7059ff;
-                text-align: center
-            }
+        .title2 {
+            padding-top: 0.3rem;
+            font-size: 0.9rem;
+            text-align: left;
+            line-height: 1.5;
+        }
 
-            .question {
-                padding: 1.50rem 1.50rem 0.75rem;
-                cursor: pointer
-            }
+        .question {
+            padding: 1.25rem 1.25rem;
+            cursor: pointer;
+        }
 
-            .answer {
-                display: none;
-                padding: 0 1.50rem 1.50rem;
-                line-height: 1.5;
-                color: #999;
-                overflow-wrap: break-word;
-                word-wrap: break-word;
-                max-width: 100%
-            }
+        .item:not(.open) .question:hover {
+            color: rgba(255, 255, 255, 0.75);
+        }
 
-            .answer.active {
-                display: block
-            }
+        .answer {
+            display: none;
+            padding: 0 1.25rem 1.25rem;
+            line-height: 1.5;
+            color: rgb(120, 121, 132);
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            max-width: 100%;
+        }
 
-            .item:has(.answer.active) {
-                border-radius: 1rem;
-                background-color: rgba(219, 219, 219, 0.08);
-                box-shadow: inset 0 0 0 0.10rem #dbdbdb04
-            }
+        .answer.active {
+            display: block;
+        }
 
-            .highlight {
-                color: #b4a8ff
-            }
+        .code {
+            background: rgb(53, 83, 50);
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+            border-radius: 3px;
+            font-family: "Andale Mono";
+            color: rgb(180, 255, 133);
+        }
 
-            .subtitlehighlight {
-                color: #787984
-            }
+        .item.open {
+            border-radius: 1rem;
+            background-color: rgba(219, 219, 219, 0.08);
+            box-shadow: inset 0 0 0 0.1rem rgba(219, 219, 219, 0.04);
+        }
 
-            .answer ul {
-                margin: 0.75rem 0 0 1.50rem;
-                padding: 0;
-                list-style-type: disc
-            }
-            
-            .answer li {
-                margin: 0
-            }
+        .highlight {
+            color: rgb(143, 143, 255);
+        }
 
-            .answer p {
-                margin: 0
-            }
-        </style>
-    </head>
-    <body>
-        <div class="faq">
-            <div class="title">Vooverse<br><span class="subtitlehighlight">Not just a sandbox game.</span></div>
-            <div class="item">
-                <div class="question">What is Vooverse?</div>
-                <div class="answer">
-                    <p>Vooverse is an upcoming sandbox game supercharged with an ideology of total truth, transparency, and honesty&mdash;the one platform you can trust to be at your side. In Vooverse, players, or <span class="highlight">Voos</span>, will be able to:</p>
-                    <ul>
-                        <li>Collect, sell, and trade <span class="highlight">Items</span> in a safe virtual economy</li>
-                        <li>Create and join <span class="highlight">Groups</span> of many kinds</li>
-                        <li>Connect and interact with fellow Voos</li>
-                        <li>Explore and build <span class="highlight">Worlds</span></li>
-                        <li>Customize their Voos with Items such as <span class="highlight">Hats</span> and <span class="highlight">Skins</span></li>
-                        <li>Lock in a membership for next-level benefits</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="item">
-                <div class="question">Can I join Vooverse?</div>
-                <div class="answer">No, because we are not ready, but since you're here so early, we'd encourage noting the code <span class="highlight">SPACEPIRATE</span> to redeem for a special in-platform reward.</div>
-            </div>
-            <div class="item">
-                <div class="question">Can I support Vooverse?</div>
-                <div class="answer">Yes, we would recommend you to bookmark us (it's free) and keep checking back in.</div>
-            </div>
-            <div class="item">
-                <div class="question">The Walled Garden Rule</div>
-                <div class="answer"><span class="highlight">We only exist on Vooverse.com</span>. We will never be on social media, other websites, or apps. FOR YOUR SAFETY, IGNORE IMPERSONATORS AND INVITATIONS TO FORM COMMUNITIES BASED ON VOOVERSE.</div>
+        .subtext {
+            color: rgb(120, 121, 132);
+        }
+
+        a {
+            color: rgb(159, 159, 168);
+            text-decoration-line: none;
+        }
+
+        a:hover {
+            color: rgb(188, 189, 194);
+            text-decoration-line: underline;
+        }
+
+        .answer ul {
+            margin: 0.30rem 0em 0em 1.50rem;
+            padding: 0px;
+            list-style-type: disc;
+        }
+
+        .answer ul li::marker {
+            color: rgba(219, 219, 219, 0.24)
+        }
+
+        .answer p {
+            margin: 0em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="transmission">
+        <div class="title">
+            Vooverse<span class="subtext">. It was never just a sandbox game.</span>
+        </div>
+        <div class="item">
+            <div class="question">What is Vooverse?</div>
+            <div class="answer">
+                <p>Vooverse is an upcoming sandbox game supercharged with an ideology of total truth, transparency, and honesty. In other words, the one platform you can trust to be at your side. Players, or <span class="highlight">Voos</span>, will be able to:</p>
+                <ul>
+                    <li>Collect, sell, and trade <span class="highlight">Items</span> in a safe virtual economy</li>
+                    <li>Create and join <span class="highlight">Groups</span> of many kinds</li>
+                    <li>Explore and build <span class="highlight">Worlds</span></li>
+                    <li>Customize their Voos with Items such as <span class="highlight">Hats</span> and <span class="highlight">Skins</span></li>
+                    <li>Lock in a membership for next-level benefits</li>
+                </ul>
             </div>
         </div>
-        <script>
-            const questions=document.querySelectorAll('.question');
-            questions.forEach(q => {
-                q.addEventListener('click', () => {
-                    const currentAnswer=q.nextElementSibling;
-                    document.querySelectorAll('.answer.active').forEach(answer => {
-                        if (answer !== currentAnswer) {
-                            answer.classList.remove('active');
-                        }
-                    });
-                    currentAnswer.classList.toggle('active');
+        <div class="item">
+            <div class="question">Can I join Vooverse?</div>
+            <div class="answer">No, because we are not ready, but since you're here so early, we'd encourage noting the code <span class="code">SPACEPIRATE</span> to redeem for a special in-platform reward.</div>
+        </div>
+        <div class="item">
+            <div class="question">Can I support Vooverse?</div>
+            <div class="answer">Yes, we would recommend you to bookmark us (it's free) and keep checking back in.</div>
+        </div>
+        <div class="title2"><span class="subtext">Vooverse observes the Walled Garden Rule, which means that Vooverse only exists on Vooverse.com. Vooverse will never be on social media, other websites, or apps. For your safety, treat anything outside of Vooverse as impersonation. Don't be shy, say hi at <a href="mailto:hello@vooverse.com">hello@vooverse.com</a>.</span></div>
+    </div>
+    <script>
+        const questions = document.querySelectorAll(".question");
+        questions.forEach((q) => {
+            q.addEventListener("click", () => {
+                const item = q.parentElement;
+                const currentAnswer = q.nextElementSibling;
+                document.querySelectorAll(".answer.active").forEach((answer) => {
+                    if (answer !== currentAnswer) {
+                        answer.classList.remove("active");
+                        answer.parentElement.classList.remove("open");
+                    }
                 });
+                currentAnswer.classList.toggle("active");
+                item.classList.toggle("open");
             });
-        </script>
-    </body>
+        });
+    </script>
+</body>
 </html>
