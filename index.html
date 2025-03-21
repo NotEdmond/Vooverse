@@ -4,51 +4,57 @@
     <title>Vooverse</title>
     <link href="favicon.ico" rel="icon" type="image/x-icon">
     <link href="https://rsms.me/inter/inter.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono" rel="stylesheet">
     <meta name="description" content="Prepare for the platform of a lifetime.">
     <style>
         html {
             color: rgba(255, 255, 255, 0.64);
-            font-family: Inter;
+            font-family: "Inter";
         }
 
         body {
             margin: 0;
-            padding: 0;
-            height: 100vh;
             background: #121218;
-            overflow: hidden;
         }
 
         .transmission {
-            max-width: 37.5rem;
-            margin: 0 auto;
+            max-width: 34rem;
+            margin: 0px auto;
             position: relative;
-            z-index: 2;
-            padding: 1rem 0;
         }
 
         .title {
             padding-top: 1rem;
             padding-bottom: 1rem;
             font-size: 1.1rem;
-            color: rgb(143, 143, 255);
+            color: #7b7c87;
             text-align: center;
         }
 
-        .title2 {
+        .footer {
             padding-top: 0.3rem;
             font-size: 0.9rem;
             text-align: left;
             line-height: 1.5;
+            color: #7b7c87;
         }
 
         .question {
             padding: 1.25rem 1.25rem;
             cursor: pointer;
+            transition: all 0.1s ease-in-out;
+        }
+
+        .item.open {
+            border-radius: 1rem;
+            background-color: rgba(219, 219, 219, 0.08);
+            box-shadow: inset 0 0 0 0.1rem rgba(219, 219, 219, 0.04);
         }
 
         .item:not(.open) .question:hover {
             color: rgba(255, 255, 255, 0.75);
+            border-radius: 1rem;
+            box-shadow: inset 0 0 0 0.1rem rgba(219, 219, 219, 0.04);
         }
 
         .answer {
@@ -65,27 +71,30 @@
             display: block;
         }
 
-        .code {
-            background: rgb(53, 83, 50);
-            padding-left: 0.25rem;
-            padding-right: 0.25rem;
-            border-radius: 3px;
-            font-family: "Andale Mono";
-            color: rgb(180, 255, 133)
+        .answer ul {
+            margin: 0.30rem 0em 0em 1.50rem;
+            padding: 0px;
+            list-style-type: disc;
         }
 
-        .item.open {
-            border-radius: 1rem;
-            background-color: rgba(219, 219, 219, 0.08);
-            box-shadow: inset 0 0 0 0.1rem rgba(219, 219, 219, 0.04)
+        .answer ul li::marker {
+            color: rgba(219, 219, 219, 0.24);
+        }
+
+        .answer p {
+            margin: 0em;
+        }
+
+        .code {
+            background: #2d2c44;
+            border-radius: 0.25rem;
+            padding: 0px 0.25rem;
+            font-family: "JetBrains Mono";
+            color: rgb(143, 143, 255);
         }
 
         .highlight {
-            color: rgb(143, 143, 255)
-        }
-
-        .subtext {
-            color: #7b7c87
+            color: rgb(143, 143, 255);
         }
 
         a {
@@ -97,27 +106,11 @@
             color: rgb(188, 189, 194);
             text-decoration-line: underline;
         }
-
-        .answer ul {
-            margin: 0.30rem 0em 0em 1.50rem;
-            padding: 0px;
-            list-style-type: disc;
-        }
-
-        .answer ul li::marker {
-            color: rgba(219, 219, 219, 0.24)
-        }
-
-        .answer p {
-            margin: 0em;
-        }
     </style>
 </head>
 <body>
     <div class="transmission">
-        <div class="title">
-            Vooverse<span class="subtext">. It was never just a sandbox game.</span>
-        </div>
+        <div class="title"><span class="highlight">Vooverse</span>. It was never just a sandbox game.</div>
         <div class="item">
             <div class="question">What is Vooverse?</div>
             <div class="answer">
@@ -133,13 +126,15 @@
         </div>
         <div class="item">
             <div class="question">When will Vooverse be ready?</div>
-            <div class="answer">We do not know, but since you're here so early, we would encourage noting the code <span class="code">SPACEPIRATE</span> to redeem for a special in-platform reward.</div>
+            <div class="answer">We do not know, but since you're here so early, we would encourage noting the code <span class="code">spacepirate</span> to redeem for a special in-platform reward.</div>
         </div>
         <div class="item">
             <div class="question">Can I support Vooverse?</div>
             <div class="answer">Yes, we would recommend you to bookmark us (it's free) and keep checking back in. You are welcome to share the news with your friends.</div>
         </div>
-        <div class="title2"><span class="subtext">Vooverse does not exist anywhere but <a href="https://vooverse.com">Vooverse.com</a>. We invite you to <a href="mailto:hello@vooverse.com">tell us</a> what makes a sandbox game worthy of your time and business.</span></div>
+        <div class="footer">Vooverse does not exist anywhere but <a
+                    href="https://vooverse.com">Vooverse.com</a>. We invite you to <a
+                    href="mailto:hello@vooverse.com">tell us</a> what makes a sandbox game worthy of your time and business.</div>
     </div>
     <script>
         const questions = document.querySelectorAll(".question");
