@@ -14,8 +14,6 @@
             --muted-color: #7b7c87;
             --highlight-color: #cdc8ff;
             --divider-color: rgba(219, 219, 219, 0.1);
-            --link-color: rgb(159, 159, 168);
-            --link-hover: rgb(188, 189, 194);
         }
 
         *, :before, :after {
@@ -26,7 +24,7 @@
 
         html {
             color: var(--text-color);
-            font-family: "Geist", sans-serif;
+            font-family: "Geist";
         }
 
         body {
@@ -41,7 +39,7 @@
         }
 
         .title {
-            padding-bottom: clamp(3rem, 2vw, 4rem);
+            padding-bottom: clamp(2rem, 2vw, 4rem);
             font-size: clamp(1.4rem, 3vw, 2rem);
             color: var(--muted-color);
             text-align: center;
@@ -58,17 +56,17 @@
         }
 
         .question {
-            padding: clamp(1rem, 2.5vw, 1.5rem);
+            padding: 0 clamp(1rem, 2.5vw, 1.5rem) clamp(1rem, 2.5vw, 1.5rem);
             font-size: clamp(1.8rem, 3.5vw, 2.5rem);
-            font-weight: 700;
+            font-weight: 600;
             border-radius: clamp(0.75rem, 1.75vw, 1.25rem);
             color: rgba(255, 255, 255, 0.75);
         }
 
         .answer {
-            padding: 0 clamp(1rem, 2.5vw, 1.5rem);
+            padding: 0 clamp(1rem, 2.5vw, 1.5rem) clamp(1rem, 2.5vw, 1.5rem);
             font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-            color: rgb(120, 121, 132);
+            color: var(--muted-color);
             overflow-wrap: break-word;
         }
 
@@ -89,22 +87,13 @@
         }
 
         .code {
-            font-family: "Geist Mono", monospace;
+            font-family: "Geist Mono";
         }
 
         .highlight {
             color: var(--highlight-color);
             text-shadow: 0 0 clamp(2rem, 1.5vw, 4rem) #cdc8ff50;
-        }
-
-        a {
-            color: var(--link-color);
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: var(--link-hover);
-            text-decoration: underline;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -143,7 +132,6 @@
             <h2 class="question">Will there be early access?</h2>
             <div class="answer">Yes, the <span class="highlight">Early Access Program</span> gets first dibs on experiencing Vooverse. You can only join it if you've been invited.</div>
         </section>
-
         <footer class="footer">Vooverse does not exist anywhere else. &copy; 2025 Vooverse Inc.</footer>
     </main>
 </body>
